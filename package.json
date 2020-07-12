@@ -2,10 +2,14 @@
   "name": "topotal-ui",
   "version": "0.0.2",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -14,23 +18,26 @@
   "keywords": [
     "react",
     "react-native",
-    "sketchApp"
+    "react-component",
+    "topotal",
+    "typescript"
   ],
   "author": "sawa-zen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/topotal/topotal-ui/issues"
   },
   "homepage": "https://github.com/topotal/topotal-ui#readme",
   "peerDependencies": {
-    "react": "16.*.*",
-    "react-primitives": "^0.5.*"
+    "react": "16.*.*"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react": "^6.24.1",
+    "@types/react": "^16.9.42",
+    "@types/react-native": "^0.62.18",
     "react": "^16.2.0",
-    "react-primitives": "^0.5.0"
+    "typescript": "^3.9.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "smarthr-ui": "^9.1.0"
+  }
 }
