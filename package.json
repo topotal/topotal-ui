@@ -5,9 +5,10 @@
   "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
-    "build": "yarn build:lib && yarn build:esm",
+    "build": "yarn clean && yarn build:lib && yarn build:esm",
     "build:lib": "tsc -p tsconfig.build.json",
     "build:esm": "tsc -p tsconfig.esm.build.json",
+    "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build"
   },
   "publishConfig": {
@@ -38,9 +39,11 @@
     "@types/react": "^16.9.42",
     "@types/react-native": "^0.62.18",
     "react": "^16.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.6"
   },
   "dependencies": {
+    "polished": "^3.6.5",
     "smarthr-ui": "^9.1.0"
   }
 }
