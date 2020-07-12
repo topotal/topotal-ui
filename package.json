@@ -1,13 +1,14 @@
 {
   "name": "topotal-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
     "build": "yarn build:lib && yarn build:esm",
     "build:lib": "tsc -p tsconfig.build.json",
-    "build:esm": "tsc -p tsconfig.esm.build.json"
+    "build:esm": "tsc -p tsconfig.esm.build.json",
+    "prepublishOnly": "yarn build"
   },
   "publishConfig": {
     "access": "public",
