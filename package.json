@@ -9,7 +9,8 @@
     "build:lib": "tsc -p tsconfig.build.json",
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "clean": "rimraf lib esm",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "storybook": "start-storybook -p 6006"
   },
   "publishConfig": {
     "access": "public",
@@ -36,10 +37,15 @@
     "react": "16.*.*"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/react": "^5.3.19",
     "@types/react": "^16.9.42",
     "@types/react-native": "^0.62.18",
+    "babel-loader": "^8.1.0",
     "react": "^16.2.0",
+    "react-native-web": "^0.13.3",
     "rimraf": "^3.0.2",
+    "ts-loader": "^8.0.0",
     "typescript": "^3.9.6"
   },
   "dependencies": {

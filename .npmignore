@@ -1,3 +1,7 @@
-examples
+.storybook
 src
-.babelrc
+README.md
+tsconfig.json
+tsconfig.build.json
+tsconfig.esm.build.json
+yarn.lock
